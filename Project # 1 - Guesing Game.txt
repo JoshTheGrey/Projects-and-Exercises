@@ -31,7 +31,3 @@ try:
             break
 except ValueError:
         print('An "Integer". Thats not an integer.')
-        non_number_atempts = 0
-        non_number_atempts += 1
-        if non_number_atempts == 3:
-            print('Thanks for playing, I guess.')
