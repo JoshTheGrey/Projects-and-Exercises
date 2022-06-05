@@ -1,0 +1,35 @@
+import sys
+
+user1 = input("Player one, what is your name?\n")
+user2 = input("Player two, what is your name?\n")
+count = 1
+while count != 5:
+    print('\nRound', count)
+    user1_answer = input("\nPlayer one, do you want to choose rock, paper or scissors?\n")
+    user2_answer = input("\nPlayer two, do you want to choose rock, paper or scissors?\n")
+    count += 1
+
+    def rock_paper_scissors(user1_answer, user2_answer):
+        if user1_answer == user2_answer:
+            return("\nIt's a tie!")
+        elif user1_answer == 'rock':
+            if user2_answer == 'scissors':
+                return("\nRock wins!")
+            else:
+                return("\nPaper wins!")
+        elif user1_answer == 'scissors':
+            if user2_answer == 'paper':
+                return("\nScissors win!")
+            else:
+                return("\nRock wins!")
+        elif user1_answer == 'paper':
+            if user2_answer == 'rock':
+                return("\nPaper wins!")
+            else:
+                return("\nScissors win!")
+        else:
+            return("\nInvalid input! You have not entered rock, paper or scissors, try again.")
+            sys.exit()
+
+    print(rock_paper_scissors(user1_answer, user2_answer))
+    print(5 - count, 'Rounds left!\n')
